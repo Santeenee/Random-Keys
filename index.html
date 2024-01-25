@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+  <meta name="color-scheme" content="light dark" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+
+  <title>Random Keys</title>
+</head>
+
+<body>
+  <h1>Random Keys</h1>
+
+  <header>
+    <div id="filters-wrapper">
+      <label for="select-filters">Select Filters</label>
+      <select name="filters" id="select-filters">
+        <option value="No alterations">No # or ♭</option>
+        <option value="No minor keys">No minor keys</option>
+      </select>
+    </div>
+    <div id="lang">
+      <button id="fixed-do">Do Re Mi Fa Sol La Si</button>
+      <button id="eng-system">C D E F G A B</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="key"></div>
+    <button id="shuffle">Shuffle</button>
+  </main>
+
+</body>
+
+</html>
