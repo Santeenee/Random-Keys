@@ -1,12 +1,12 @@
 <html lang="en">
 
 <head>
-  <meta name="color-scheme" content="light dark" />
+  <meta name="color-scheme" content="dark light" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="style.css" />
-  <script defer src="app.js"></script>
+  <script defer src="script.js"></script>
 
   <title>Random Keys</title>
 </head>
@@ -15,22 +15,28 @@
   <h1>Random Keys</h1>
 
   <header>
-    <div id="filters-wrapper">
+    <div class="filters-wrapper">
       <label for="select-filters">Select Filters</label>
       <select name="filters" id="select-filters">
-        <option value="No alterations">No # or ♭</option>
-        <option value="No minor keys">No minor keys</option>
+        <option value="easy">No # or ♭</option>
+        <option value="medium" selected>No minor keys</option>
+        <option value="hard">All allowed</option>
       </select>
     </div>
-    <div id="lang">
-      <button id="fixed-do">Do Re Mi Fa Sol La Si</button>
-      <button id="eng-system">C D E F G A B</button>
+    <div class="filters-wrapper">
+      <label for="select-lang">Select system</label>
+      <select name="lang" id="select-lang">
+        <option value="fixed-do" selected>Do Re Mi Fa Sol La Si</option>
+        <option value="eng-system">C D E F G A B</option>
+      </select>
     </div>
   </header>
 
   <main>
-    <div id="key"></div>
-    <button id="shuffle">Shuffle</button>
+    <div id="key">RE# M</div>
+    <button id="shuffle">
+      <span>S</span><span>h</span><span>u</span><span>f</span><span>f</span><span>l</span><span>e</span>
+    </button>
   </main>
 
 </body>
