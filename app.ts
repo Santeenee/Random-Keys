@@ -31,6 +31,7 @@ langSelect?.addEventListener('change', function () {
 filtersSelect?.addEventListener('change', function () {
   mode = this.value
   console.log(this.value)
+
 })
 
 /* '🔀 SHUFFLE' clicked */
