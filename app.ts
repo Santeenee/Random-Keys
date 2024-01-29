@@ -36,6 +36,7 @@ filtersSelect?.addEventListener('change', function () {
 
 /* '🔀 SHUFFLE' clicked */
 shuffleBtn?.addEventListener('click', () => {
+  shuffleBtn.classList.add('clicked')
 
   document.body?.style.setProperty('--hue', getRandomInt(360).toString())
 
@@ -86,3 +87,9 @@ function changeKey(key: string, alt = '', keyType: string) {
   else if (mode === 'hard') keyDiv.innerText = `${key}${alt} ${keyType}`
   else keyDiv.innerText = 'what??'
 }
+
+setTimeout(() => {
+  if (!shuffleBtn?.classList.contains('clicked')) {
+    shuffleBtn?.classList.add('hint')
+  }
+}, 5000);

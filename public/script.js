@@ -28,6 +28,7 @@ filtersSelect === null || filtersSelect === void 0 ? void 0 : filtersSelect.addE
 /* '🔀 SHUFFLE' clicked */
 shuffleBtn === null || shuffleBtn === void 0 ? void 0 : shuffleBtn.addEventListener('click', function () {
     var _a;
+    shuffleBtn.classList.add('clicked');
     (_a = document.body) === null || _a === void 0 ? void 0 : _a.style.setProperty('--hue', getRandomInt(360).toString());
     var randKey = lang === 'fixed-do' ? FIXED_DO_KEYS[getRandomInt(7)] : KEYS[getRandomInt(7)];
     var randAlteration = getRandAlteration();
@@ -71,3 +72,8 @@ function changeKey(key, alt, keyType) {
     else
         keyDiv.innerText = 'what??';
 }
+setTimeout(function () {
+    if (!(shuffleBtn === null || shuffleBtn === void 0 ? void 0 : shuffleBtn.classList.contains('clicked'))) {
+        shuffleBtn === null || shuffleBtn === void 0 ? void 0 : shuffleBtn.classList.add('hint');
+    }
+}, 5000);
